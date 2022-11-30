@@ -1,1 +1,0 @@
-Starting my devops journey
