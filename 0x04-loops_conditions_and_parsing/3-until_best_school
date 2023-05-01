@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
-# Prints Holberton School 10 times with the until keyword
-count=1
-until [ $count -gt 10 ];
-do
-	echo "Holberton School"
-	((count=count+1))
+# print a string 10 times using until loop
+
+i=0
+
+until false; do
+  echo "Best School"
+  ((i++))
+  if [[ $i -lt 10 ]]; then
+    continue
+  else
+    break
+  fi
 done

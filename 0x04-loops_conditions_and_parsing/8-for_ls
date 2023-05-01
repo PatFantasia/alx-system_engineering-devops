@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Prints the list of all of the directories and files as ls
-for i in *;
-do
-    echo "$i" | cut -d- -f2
+# ls using for loop
+
+for file in *; do
+  echo "$file" | cut -d '-' -f 2;
 done

@@ -1,19 +1,35 @@
 #!/usr/bin/env bash
-# Checking characteristics of a file
-FILE=holbertonschool
-if test -e "$FILE"
-  then
-  echo "$FILE file exists"
-  if test -s "$FILE"
-  then
-  echo "$FILE file is not empty"
+# alx school file checker
+
+file="school"
+
+# checks if file exists
+if [ -e "$file" ]; then
+
+  echo "school file exists"
+
+  # checks if file is empty
+  if [ ! -s "$file" ]; then
+    echo "school file is empty"
+
+    # checks if file is a regular file
+    if [ -f "$file" ]; then
+      echo "school is a regular file"
+    fi  
+
   else
-  echo "$FILE file is empty"
+
+    echo "school file is not empty"
+
+    # checks if file is a regular file
+    if [ -f "$file" ]; then
+      echo "school is a regular file"
+    fi  
+  
   fi
-  if test -f "$FILE"
-  then
-  echo "$FILE is a regular file"
-  fi
+
 else
-	echo "$FILE file does not exist"
+  
+  echo "school file does not exist"
+
 fi
